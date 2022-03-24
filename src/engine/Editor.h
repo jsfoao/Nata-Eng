@@ -6,4 +6,5 @@ class Editor
 public:
 	static void execute_start();
 	static void execute_update();
+	static void execute_render();
 };

@@ -3,6 +3,8 @@
 #include "../src/game/Scripts/Components/PlayerController.hpp"
 #pragma endregion
 
+extern Engine* n_engine;
+
 static Entity* entity1 = nullptr;
 static Entity* entity2 = nullptr;
 void Editor::execute_start()
@@ -18,8 +20,17 @@ void Editor::execute_start()
 	entity2->getComponent<Renderer>()->color = Color::Green;
 	entity2->getComponent<Renderer>()->renderLayer = RenderLayer::Foreground;
 	entity2->transform->scale = Vector2(32, 32);
+
+
 }
 
 void Editor::execute_update()
 {
+}
+
+void Editor::execute_render()
+{
+	Debug::DrawLine(entity1->transform->position, entity2->transform->position, Color::Red);
+	Debug::DrawCircleWire(entity1->transform->position, 64.f, 32, Color::Red);
+	Debug::DrawSquareWire(entity2->transform->position, Vector2(40.f, 60.f), Color::Green);
 }

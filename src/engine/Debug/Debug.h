@@ -13,4 +13,15 @@ public:
 
 	static void DrawLine(Vector2 a, Vector2 b);
 	static void DrawLine(Vector2 a, Vector2 b, Color color);
+
+	static void DrawRay(Vector2 point, Vector2 direction);
+	static void DrawRay(Vector2 point, Vector2 direction, Color color);
+
+	static void DrawSquareWire(Vector2 pos, Vector2 scale);
+	static void DrawSquareWire(Vector2 pos, Vector2 scale, Color color);
+	static void DrawSquareFill(Vector2 pos, Vector2 scale);
+	static void DrawSquareFill(Vector2 pos, Vector2 scale, Color color);
+
+	static void DrawCircleWire(Vector2 pos, float radius, int resolution);
+	static void DrawCircleWire(Vector2 pos, float radius, int resolution, Color color);
 };

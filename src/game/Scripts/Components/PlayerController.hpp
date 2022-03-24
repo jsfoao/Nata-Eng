@@ -8,7 +8,7 @@ public:
 public:
 	void start() override
 	{
-		speed = 10.f;
+		speed = 200.f;
 	}
 	void update() override
 	{
@@ -18,19 +18,19 @@ public:
 		}
 		if (Input::GetKey(SDL_SCANCODE_W))
 		{
-			owner->transform->position.y -= speed;
+			owner->transform->position.y -= speed * Engine::deltaTime;
 		}
 		if (Input::GetKey(SDL_SCANCODE_S))
 		{
-			owner->transform->position.y += speed;
+			owner->transform->position.y += speed * Engine::deltaTime;
 		}
 		if (Input::GetKey(SDL_SCANCODE_A))
 		{
-			owner->transform->position.x -= speed;
+			owner->transform->position.x -= speed * Engine::deltaTime;
 		}
 		if (Input::GetKey(SDL_SCANCODE_D))
 		{
-			owner->transform->position.x += speed;
+			owner->transform->position.x += speed * Engine::deltaTime;
 		}
 	}
 };

@@ -117,6 +117,7 @@ void Engine::render()
 	SDL_SetRenderDrawColor(renderer, 25, 25, 40, 255);
 	SDL_RenderClear(renderer);
 	RenderBuffer::Render();
+	Editor::execute_render();
 	SDL_RenderPresent(renderer);
 }
 
