@@ -19,6 +19,8 @@
     <ClCompile Include="src\engine\Debug\Debug.cpp" />
     <ClCompile Include="src\engine\Render\RenderBuffer.cpp" />
     <ClCompile Include="src\engine\Editor.cpp" />
+    <ClCompile Include="src\engine\ParticleSystem\ParticleSystem.cpp" />
+    <ClCompile Include="src\engine\Math\Random.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\engine\Engine.h" />
@@ -41,6 +43,8 @@
     <ClInclude Include="src\engine\Render\RenderBuffer.h" />
     <ClInclude Include="src\game\Scripts\Components\PlayerController.hpp" />
     <ClInclude Include="src\engine\Editor.h" />
+    <ClInclude Include="src\engine\ParticleSystem\ParticleSystem.h" />
+    <ClInclude Include="src\engine\Math\Random.h" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="res\roboto.ttf" />

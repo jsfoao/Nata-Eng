@@ -1,4 +1,6 @@
 #include "Editor.h"
+#include "../src/engine/Math/Random.h"
+
 #pragma region Components
 #include "../src/game/Scripts/Components/PlayerController.hpp"
 #pragma endregion

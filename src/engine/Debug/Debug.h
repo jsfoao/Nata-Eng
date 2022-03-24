@@ -10,6 +10,9 @@ class Debug
 {
 public:
 	static void Log(std::string str);
+	static void Log(float a);
+	static void Log(int a);
+	static void Log(Vector2 vec);
 
 	static void DrawLine(Vector2 a, Vector2 b);
 	static void DrawLine(Vector2 a, Vector2 b, Color color);

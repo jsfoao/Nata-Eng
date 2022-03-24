@@ -11,6 +11,11 @@ void Debug::Log(std::string str)
 	std::cout << str << std::endl;
 }
 
+void Debug::Log(float f)
+{
+	std::cout << f << std::endl;
+}
+
 void Debug::DrawLine(Vector2 a, Vector2 b)
 {
 	SDL_SetRenderDrawColor(n_engine->renderer, 255, 255, 255, 255);

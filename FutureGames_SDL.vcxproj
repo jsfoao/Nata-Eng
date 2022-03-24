@@ -104,6 +104,8 @@
     <ClCompile Include="src\engine\Editor.cpp" />
     <ClCompile Include="src\engine\Engine.cpp" />
     <ClCompile Include="src\engine\Input\Input.cpp" />
+    <ClCompile Include="src\engine\Math\Random.cpp" />
+    <ClCompile Include="src\engine\ParticleSystem\ParticleSystem.cpp" />
     <ClCompile Include="src\engine\Render\RenderBuffer.cpp" />
     <ClCompile Include="src\engine\TextureManager.cpp" />
     <ClCompile Include="src\engine\Vector\Vector2.cpp" />
@@ -126,6 +128,8 @@
     <ClInclude Include="src\engine\Engine.h" />
     <ClInclude Include="src\engine\Entities\Core\CoreEntities.h" />
     <ClInclude Include="src\engine\Input\Input.h" />
+    <ClInclude Include="src\engine\Math\Random.h" />
+    <ClInclude Include="src\engine\ParticleSystem\ParticleSystem.h" />
     <ClInclude Include="src\engine\Render\RenderBuffer.h" />
     <ClInclude Include="src\engine\TextureManager.h" />
     <ClInclude Include="src\engine\Vector\Vector2.h" />
