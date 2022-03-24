@@ -1,7 +1,6 @@
 #include "engine/Engine.h"
 
 extern Engine* n_engine;
-extern Time* n_time;
 
 int main()
 {
@@ -16,7 +15,7 @@ int main()
 		Uint64 ticks = SDL_GetPerformanceCounter();
 		Uint64 delta_ticks = ticks - previous_ticks;
 		previous_ticks = ticks;
-		n_time->deltaTime = (float)delta_ticks / SDL_GetPerformanceFrequency();
+		Engine::deltaTime = (float)delta_ticks / SDL_GetPerformanceFrequency();
 
 		n_engine->handleEvents();
 		n_engine->update();

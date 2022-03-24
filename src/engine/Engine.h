@@ -1,4 +1,5 @@
 #pragma once
+#include "Editor.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -6,6 +7,7 @@
 #include <stdlib.h>
 #include <SDL/SDL.h>
 
+#include "Render/RenderBuffer.h"
 #include "Vector/Vector2.h"
 #include "Color/Color.h"
 #include "Window/Window.h"
@@ -19,17 +21,6 @@
 #include "Components/Core/Rigidbody.h"
 
 #include "Entities/Core/CoreEntities.h"
-#pragma region Time
-class Time
-{
-public:
-	Time();
-	~Time();
-
-public:
-	static float deltaTime;
-};
-#pragma endregion
 
 class Engine
 {
@@ -37,9 +28,9 @@ public:
 	bool isRunning;
 	Window* window;
 	SDL_Renderer* renderer;
-	Time* time;
 	std::vector<Entity*> entities;
 	std::vector<Collider*> colliders;
+	static float deltaTime;
 
 public:
 	Engine();

@@ -2,7 +2,6 @@
 
 Engine* n_engine = nullptr;
 Input* n_input = nullptr;
-Time* n_time = nullptr;
 int n_scancode = 0;
 
 #pragma region Global funcs
@@ -56,7 +55,6 @@ void Engine::init(const char* title, int x, int y, int width, int height, bool f
 		window = new Window(title, x, y, width, height, fullscreen);
 		renderer = SDL_CreateRenderer(window->sdl_window, -1, 0);
 		n_input = new Input();
-		n_time = new Time();
 		isRunning = true;
 	}
 	else
@@ -95,11 +93,10 @@ void Engine::handleEvents()
 	Input::evaluateKeyState(n_scancode);
 }
 
+Entity* entity = nullptr;
 void Engine::start() 
 {
-	Entity* entity = Instantiate(new Entity, Vector2(0, 0));
-	entity->transform->scale = Vector2(64, 64);
-
+	Editor::execute_start();
 	for (int i = entities.size() - 1; i >= 0; i--)
 	{
 		entities[i]->start();
@@ -108,6 +105,7 @@ void Engine::start()
 
 void Engine::update()
 {
+	Editor::execute_update();
 	for (int i = entities.size() - 1; i >= 0; i--)
 	{
 		entities[i]->update();
@@ -118,12 +116,7 @@ void Engine::render()
 {
 	SDL_SetRenderDrawColor(renderer, 25, 25, 40, 255);
 	SDL_RenderClear(renderer);
-
-	for (int i = entities.size() - 1; i >= 0; i--)
-	{
-		entities[i]->render();
-	}
-
+	RenderBuffer::Render();
 	SDL_RenderPresent(renderer);
 }
 
@@ -134,10 +127,6 @@ void Engine::clean()
 	SDL_Quit();
 	printf("Engine cleaned");
 }
-#pragma endregion
 
-#pragma region Time
-Time::Time() {}
-Time::~Time() {}
-float Time::deltaTime = 0.f;
+float Engine::deltaTime = 0.f;
 #pragma endregion

@@ -17,6 +17,8 @@
     <ClCompile Include="src\engine\Components\Core\Collisions\Circle.cpp" />
     <ClCompile Include="src\engine\Components\Core\Collisions\OBB.cpp" />
     <ClCompile Include="src\engine\Debug\Debug.cpp" />
+    <ClCompile Include="src\engine\Render\RenderBuffer.cpp" />
+    <ClCompile Include="src\engine\Editor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\engine\Engine.h" />
@@ -36,6 +38,9 @@
     <ClInclude Include="src\engine\Components\Core\Collisions\OBB.h" />
     <ClInclude Include="src\engine\Math\Matrix.h" />
     <ClInclude Include="src\engine\Debug\Debug.h" />
+    <ClInclude Include="src\engine\Render\RenderBuffer.h" />
+    <ClInclude Include="src\game\Scripts\Components\PlayerController.hpp" />
+    <ClInclude Include="src\engine\Editor.h" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="res\roboto.ttf" />

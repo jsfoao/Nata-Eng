@@ -101,8 +101,10 @@
     <ClCompile Include="src\engine\Components\Core\Transform.cpp" />
     <ClCompile Include="src\engine\Debug\Debug.cpp" />
     <ClCompile Include="src\engine\ECS\ECS.cpp" />
+    <ClCompile Include="src\engine\Editor.cpp" />
     <ClCompile Include="src\engine\Engine.cpp" />
     <ClCompile Include="src\engine\Input\Input.cpp" />
+    <ClCompile Include="src\engine\Render\RenderBuffer.cpp" />
     <ClCompile Include="src\engine\TextureManager.cpp" />
     <ClCompile Include="src\engine\Vector\Vector2.cpp" />
     <ClCompile Include="src\engine\Window\Window.cpp" />
@@ -118,14 +120,17 @@
     <ClInclude Include="src\engine\Components\Core\Rigidbody.h" />
     <ClInclude Include="src\engine\Components\Core\Transform.h" />
     <ClInclude Include="src\engine\Debug\Debug.h" />
+    <ClInclude Include="src\engine\Editor.h" />
     <ClInclude Include="src\engine\Math\Matrix.h" />
     <ClInclude Include="src\engine\ECS\ECS.h" />
     <ClInclude Include="src\engine\Engine.h" />
     <ClInclude Include="src\engine\Entities\Core\CoreEntities.h" />
     <ClInclude Include="src\engine\Input\Input.h" />
+    <ClInclude Include="src\engine\Render\RenderBuffer.h" />
     <ClInclude Include="src\engine\TextureManager.h" />
     <ClInclude Include="src\engine\Vector\Vector2.h" />
     <ClInclude Include="src\engine\Window\Window.h" />
+    <ClInclude Include="src\game\Scripts\Components\PlayerController.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="res\roboto.ttf" />
