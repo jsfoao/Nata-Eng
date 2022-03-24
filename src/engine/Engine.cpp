@@ -3,7 +3,6 @@
 Engine* n_engine = nullptr;
 Input* n_input = nullptr;
 Time* n_time = nullptr;
-GameManager* n_game = nullptr;
 int n_scancode = 0;
 
 #pragma region Global funcs
@@ -96,13 +95,10 @@ void Engine::handleEvents()
 	Input::evaluateKeyState(n_scancode);
 }
 
-Vector2 v1 = Vector2(0, 1);
-Vector2 v2 = Vector2(1, 0);
-
 void Engine::start() 
 {
-	std::cout << "Angle: " << Vector2::Angle(v1, v2) << std::endl;
-	std::cout << "Dot: " << Vector2::Dot(v1, v2) << std::endl;
+	Entity* entity = Instantiate(new Entity, Vector2(0, 0));
+	entity->transform->scale = Vector2(64, 64);
 
 	for (int i = entities.size() - 1; i >= 0; i--)
 	{
@@ -122,14 +118,6 @@ void Engine::render()
 {
 	SDL_SetRenderDrawColor(renderer, 25, 25, 40, 255);
 	SDL_RenderClear(renderer);
-
-	//Debug::DrawLine(Vector2(0, 0), Vector2(100, 100), Color::Red);
-	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-	SDL_RenderDrawLineF(renderer, 200, 600, 200, 600);
-	SDL_RenderDrawLine(renderer, 200, 600, 200, 600);
-	SDL_RenderDrawPoint(renderer, 200, 200);
-	std::cout << "render" << std::endl;
-
 
 	for (int i = entities.size() - 1; i >= 0; i--)
 	{

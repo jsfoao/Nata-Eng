@@ -19,8 +19,6 @@
 #include "Components/Core/Rigidbody.h"
 
 #include "Entities/Core/CoreEntities.h"
-#include "../game/Scripts/GameManager.h"
-
 #pragma region Time
 class Time
 {

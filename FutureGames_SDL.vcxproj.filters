@@ -12,12 +12,7 @@
     <ClCompile Include="src\engine\Components\Core\Transform.cpp" />
     <ClCompile Include="src\engine\Components\Core\Renderer.cpp" />
     <ClCompile Include="src\engine\Components\Core\Collider.cpp" />
-    <ClCompile Include="src\game\Scripts\Components\PlayerController.cpp" />
     <ClCompile Include="src\engine\Components\Core\Rigidbody.cpp" />
-    <ClCompile Include="src\game\Scripts\GameManager.cpp" />
-    <ClCompile Include="src\game\Scripts\Components\BallController.cpp" />
-    <ClCompile Include="src\game\Scripts\Components\BrickController.cpp" />
-    <ClCompile Include="src\game\Scripts\LevelManager.cpp" />
     <ClCompile Include="src\engine\Components\Core\Collisions\AABB.cpp" />
     <ClCompile Include="src\engine\Components\Core\Collisions\Circle.cpp" />
     <ClCompile Include="src\engine\Components\Core\Collisions\OBB.cpp" />
@@ -34,27 +29,13 @@
     <ClInclude Include="src\engine\Components\Core\Transform.h" />
     <ClInclude Include="src\engine\Components\Core\Renderer.h" />
     <ClInclude Include="src\engine\Components\Core\Collider.h" />
-    <ClInclude Include="src\game\Scripts\Components\PlayerController.h" />
     <ClInclude Include="src\engine\Entities\Core\CoreEntities.h" />
     <ClInclude Include="src\engine\Components\Core\Rigidbody.h" />
-    <ClInclude Include="src\game\Scripts\GameManager.h" />
-    <ClInclude Include="src\game\Scripts\Entities\Brick.hpp" />
-    <ClInclude Include="src\game\Scripts\Entities\Player.hpp" />
-    <ClInclude Include="src\game\Scripts\Entities\Ball.hpp" />
-    <ClInclude Include="src\game\Scripts\Components\BallController.h" />
-    <ClInclude Include="src\game\Scripts\Components\BrickController.h" />
-    <ClInclude Include="src\game\Scripts\Entities\Wall.hpp" />
-    <ClInclude Include="src\game\Scripts\LevelManager.h" />
     <ClInclude Include="src\engine\Components\Core\Collisions\AABB.h" />
     <ClInclude Include="src\engine\Components\Core\Collisions\Circle.h" />
     <ClInclude Include="src\engine\Components\Core\Collisions\OBB.h" />
     <ClInclude Include="src\engine\Math\Matrix.h" />
     <ClInclude Include="src\engine\Debug\Debug.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="src\game\Levels\Level01.txt" />
-    <Text Include="src\game\Levels\Level02.txt" />
-    <Text Include="src\game\Levels\Level03.txt" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="res\roboto.ttf" />
