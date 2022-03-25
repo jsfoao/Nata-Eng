@@ -5,6 +5,7 @@ class PlayerController : public Component
 {
 public:
 	float speed;
+	ParticleProperties pp;
 public:
 	void start() override
 	{
@@ -14,8 +15,10 @@ public:
 	{
 		if (Input::GetKeyDown(SDL_SCANCODE_SPACE))
 		{
-			owner->getComponent<Renderer>()->renderLayer = RenderLayer::UI;
+			owner->getComponent<ParticleSystem>()->emit(pp);
 		}
+
+		// Movement controls
 		if (Input::GetKey(SDL_SCANCODE_W))
 		{
 			owner->transform->position.y -= speed * Engine::deltaTime;

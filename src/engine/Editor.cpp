@@ -3,6 +3,7 @@
 
 #pragma region Components
 #include "../src/game/Scripts/Components/PlayerController.hpp"
+#include "../src/engine/ParticleSystem/ParticleSystem.h"
 #pragma endregion
 
 extern Engine* n_engine;
@@ -14,6 +15,7 @@ void Editor::execute_start()
 	entity1 = Instantiate(new Entity(), Vector2(100, 100));
 	entity1->addComponent<Renderer>();
 	entity1->addComponent<PlayerController>();
+	entity1->addComponent<ParticleSystem>();
 	entity1->getComponent<Renderer>()->color = Color::Red;
 	entity1->transform->scale = Vector2(32, 32);
 

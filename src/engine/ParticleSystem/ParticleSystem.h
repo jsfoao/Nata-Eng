@@ -3,28 +3,29 @@
 
 struct ParticleProperties
 {
+public:
 	Vector2 Position;
+	Vector2 Scale;
 	Vector2 Velocity, VelocityVariation;
-	Color ColorBegin, ColorEnd;
-	float SizeBegin, SizeEnd, SizeVariation;
+	Color Color = Color::White;
 	float LifeTime = 1.f;
 };
 
 class Particle
 {
+public:
 	Vector2 Position;
+	Vector2 Scale;
 	Vector2 Velocity;
-	Color ColorBegin, ColorEnd;
-	float Roation = 0.f;
-	float SizeBegin, SizeEnd;
+	Color Color;
 
 	float LifeTime = 1.f;
-	float LifeRemaining = 0.f;
+	float CurrentLifeTime = 0.f;
 
 	bool Active = false;
 };
 
-class ParticleSystem
+class ParticleSystem : public Component
 {
 public:
 	ParticleSystem();
@@ -36,5 +37,5 @@ public:
 
 private:
 	std::vector<Particle> particlePool;
-
+	int poolIndex;
 };
